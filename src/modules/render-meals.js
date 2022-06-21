@@ -1,16 +1,19 @@
 import createCard from "./card-element";
 import getMealData from "./get-meals.js";
 
-export default showScore = () => {
+const showMeals = () => {
   const cardData = getMealData();
-  console.log(getMealData());
   cardData.then((value) => {
-    console.log(cardData);
-    // if (value.result) {
-    //   value.result.forEach((element) => {
-    //     const text = `${element.user}: ${element.score}`;
-    //     createLi(text);
-    //   });
+    if (value.meals) {
+      value.meals.forEach((element) => {
+        const image = `${element.strMealThumb}`;
+        console.log(image)
+        const title = `${element.strMeal}`;
+        const description = `${element.strInstructions}`;
+        createCard(image, title, description);
+      });
+    }
   });
 };
 
+export default showMeals;

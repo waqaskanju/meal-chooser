@@ -2,6 +2,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap';
 import './style.css';
 
-import showScore from './modules/render-meals';
+import showMeals from './modules/render-meals';
+import getMealData from './modules/get-meals';
 
-showScore();
+console.log(getMealData([0]));
+
+
+showMeals();

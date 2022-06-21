@@ -1,5 +1,6 @@
-const createCard = (id, title, description) => {
-  const cardContainer = document.querySelector('.row row-cols-2 row-cols-md-3 g-4');
+const cardContainer = document.querySelector('.card-container');
+
+const createCard = (image, title, description, id) => {
 
   const col = document.createElement('div');
   col.classList.add('col');
@@ -11,9 +12,10 @@ const createCard = (id, title, description) => {
   card.setAttribute('style', 'width: 18rem');
   col.appendChild(card);
 
-  const image = document.createElement('img');
-  image.classList.add('card-img-top');
-  card.appendChild(image);
+  const thumbailImage = document.createElement('img');
+  thumbailImage.classList.add('card-img-top');
+  thumbailImage.setAttribute('src', `${image}`);
+  card.appendChild(thumbailImage);
 
   const cardBody = document.createElement('div');
   card.appendChild(cardBody);
@@ -23,22 +25,22 @@ const createCard = (id, title, description) => {
   cardTitle.innerHTML = `${title}`;
   cardBody.appendChild(cardTitle);
 
-  const cardDescription = createElement('p');
+  const cardDescription = document.createElement('p');
   cardDescription.classList.add('card-text');
   cardDescription.innerHTML = `${description}`;
   cardBody.appendChild(cardDescription);
 
   const commentsButton = document.createElement('a');
   commentsButton.setAttribute('href', '#');
-  commentsButton.classList.add('btn btn-primary');
+  commentsButton.classList.add('btn', 'btn-primary');
   commentsButton.innerHTML = 'Comments';
   cardBody.appendChild(commentsButton);
 
   const reservationButton = document.createElement('a');
   reservationButton.setAttribute('href', '#');
-  reservationButton.classList.add('btn btn-primary');
+  reservationButton.classList.add('btn', 'btn-primary');
   reservationButton.innerHTML = 'Comments';
   cardBody.appendChild(reservationButton);
 };
 
-export default createCard ;
+export default createCard;
