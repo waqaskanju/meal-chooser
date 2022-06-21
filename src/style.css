@@ -5,3 +5,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+footer {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+body {
+  background-color: red;
+}
