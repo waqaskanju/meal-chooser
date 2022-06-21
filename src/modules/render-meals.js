@@ -9,8 +9,7 @@ const showMeals = () => {
         const image = `${element.strMealThumb}`;
         console.log(image)
         const title = `${element.strMeal}`;
-        const description = `${element.strInstructions}`;
-        createCard(image, title, description);
+        createCard(image, title);
       });
     }
   });

@@ -1,6 +1,6 @@
 const cardContainer = document.querySelector('.card-container');
 
-const createCard = (image, title, description, id) => {
+const createCard = (image, title, id) => {
 
   const col = document.createElement('div');
   col.classList.add('col');
@@ -27,7 +27,6 @@ const createCard = (image, title, description, id) => {
 
   const cardDescription = document.createElement('p');
   cardDescription.classList.add('card-text');
-  cardDescription.innerHTML = `${description}`;
   cardBody.appendChild(cardDescription);
 
   const commentsButton = document.createElement('a');
