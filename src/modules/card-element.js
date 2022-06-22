@@ -1,7 +1,6 @@
 const cardContainer = document.querySelector('.card-container');
 
 const createCard = (image, title, id) => {
-
   const col = document.createElement('div');
   col.classList.add('col');
   col.setAttribute('id', `${id}`);
