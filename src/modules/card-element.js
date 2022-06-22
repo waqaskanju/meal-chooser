@@ -39,7 +39,7 @@ const createCard = (image, title, id) => {
   const reservationButton = document.createElement('a');
   reservationButton.setAttribute('href', '#');
   reservationButton.classList.add('btn', 'btn-primary');
-  reservationButton.innerHTML = 'Comments';
+  reservationButton.innerHTML = 'Reservation';
   cardBody.appendChild(reservationButton);
 };
 
