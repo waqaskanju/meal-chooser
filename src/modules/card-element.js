@@ -17,6 +17,7 @@ const createCard = (image, title, id) => {
   card.appendChild(thumbailImage);
 
   const cardBody = document.createElement('div');
+  cardBody.classList.add('likes-container');
   card.appendChild(cardBody);
 
   const cardTitle = document.createElement('h5');
@@ -28,17 +29,26 @@ const createCard = (image, title, id) => {
   cardDescription.classList.add('card-text');
   cardBody.appendChild(cardDescription);
 
+  const likeIcon = document.createElement('i');
+  likeIcon.classList.add('fa-solid', 'fa-heart-circle-plus');
+  cardBody.appendChild(likeIcon);
+
+  const numberOfLikes = document.createElement('span');
+  numberOfLikes.classList.add('number-of-likes');
+  numberOfLikes.innerHTML = 'X likes';
+  cardBody.appendChild(numberOfLikes);
+
   const commentsButton = document.createElement('a');
   commentsButton.setAttribute('href', '#');
   commentsButton.classList.add('btn', 'btn-primary');
   commentsButton.innerHTML = 'Comments';
-  cardBody.appendChild(commentsButton);
+  card.appendChild(commentsButton);
 
   const reservationButton = document.createElement('a');
   reservationButton.setAttribute('href', '#');
   reservationButton.classList.add('btn', 'btn-primary');
-  reservationButton.innerHTML = 'Comments';
-  cardBody.appendChild(reservationButton);
+  reservationButton.innerHTML = 'Reservation';
+  card.appendChild(reservationButton);
 };
 
 export default createCard;
