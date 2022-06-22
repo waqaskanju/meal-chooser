@@ -1,16 +1,15 @@
-import createCard from "./card-element";
-import getMealData from "./get-meals.js";
+import createCard from './card-element.js';
+import getMealData from './get-meals.js';
 
 const showMeals = () => {
   const cardData = getMealData();
   cardData.then((value) => {
     if (value.meals) {
-      value.meals.forEach((element) => {
-        const image = `${element.strMealThumb}`;
-        console.log(image)
-        const title = `${element.strMeal}`;
+      for (let i = 1; i <= 6; i += 1) {
+        const image = value.meals[i].strMealThumb;
+        const title = value.meals[i].strMeal;
         createCard(image, title);
-      });
+      }
     }
   });
 };
