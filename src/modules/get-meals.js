@@ -3,7 +3,6 @@ const getMealData = async () => {
   let ID = 52771;
     const getData = await fetch(`${mealIdUrl}${ID}`);
     const recivedScores = getData.json();
-    ID++;
     return recivedScores;
 };
 
