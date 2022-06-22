@@ -1,3 +1,6 @@
+import getMealData from './get-meals.js';
+import { getLikes } from './get-likes.js';
+
 const cardContainer = document.querySelector('.card-container');
 
 const createCard = (image, title, id) => {
@@ -34,8 +37,9 @@ const createCard = (image, title, id) => {
   cardBody.appendChild(likeIcon);
 
   const numberOfLikes = document.createElement('span');
+  numberOfLikes.setAttribute('id', 'likesitem1');
   numberOfLikes.classList.add('number-of-likes');
-  numberOfLikes.innerHTML = 'X likes';
+  numberOfLikes.innerHTML = '0 likes';
   cardBody.appendChild(numberOfLikes);
 
   const commentsButton = document.createElement('a');

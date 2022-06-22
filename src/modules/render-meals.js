@@ -8,7 +8,8 @@ const showMeals = () => {
       for (let i = 1; i <= 6; i += 1) {
         const image = value.meals[i].strMealThumb;
         const title = value.meals[i].strMeal;
-        createCard(image, title);
+        const id = value.meals[i].idMeal;
+        createCard(image, title, id);
       }
     }
   });
