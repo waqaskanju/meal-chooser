@@ -2,7 +2,8 @@ import { setLikes } from "./get-likes.js";
 
 const cardContainer = document.querySelector('.card-container');
 
-export const createCard = (image, title, id, cardLikes) => {
+
+const createCard = (image, title, id, cardLikes, category, instruction, area, video) => {
   const col = document.createElement('div');
   col.classList.add('col');
   console.log(`${id}`);
@@ -49,6 +50,26 @@ export const createCard = (image, title, id, cardLikes) => {
 
   const commentsButton = document.createElement('a');
   commentsButton.setAttribute('href', '#');
+  commentsButton.setAttribute('data-bs-toggle', 'modal');
+  commentsButton.setAttribute('data-bs-target', '#commentModal');
+  commentsButton.addEventListener('click', () => {
+    const popupTitle = document.getElementById('commentModalLabel');
+    const mealCategory = document.getElementById('category');
+    mealCategory.innerText = category;
+    const mealArea = document.getElementById('area');
+    mealArea.innerText = area;
+    const mealTags = document.getElementById('Tag');
+    mealTags.innerHTML = instruction;
+    const mealVideo = document.getElementById('video');
+    mealVideo.innerText = title;
+    mealVideo.href = video;
+    const modelImageContainer = document.getElementById('modal-image-container');
+    modelImageContainer.innerHTML = '';
+    const myImage = document.createElement('img');
+    myImage.src = image;
+    modelImageContainer.appendChild(myImage);
+    popupTitle.innerHTML = title;
+  });
   commentsButton.classList.add('btn', 'btn-primary');
   commentsButton.innerHTML = 'Comments';
   card.appendChild(commentsButton);

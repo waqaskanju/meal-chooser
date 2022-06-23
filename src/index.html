@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -39,13 +40,50 @@
 			</nav>
 		</header>
 		<div class="row row-cols-2 row-cols-md-3 g-4 card-container">
+
       <!-- in this container the cards will be added from the API https://www.themealdb.com/api.php -->
-		</div>
-		<footer class="d-flex flex-wrap text-center p-4">
-			©️ Authors:
-			<a class="text-reset fw-bold" href="https://github.com/BregornOriginal">Julio Gagliardi</a>
-			<a class="text-reset fw-bold" href="https://github.com/waqaskanju">Waqas Ahmad</a>
-		</footer>
-		<div class="container"></div>
-	</body>
+    </div>
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="commentModal"
+      tabindex="-1"
+      aria-labelledby="commentModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog  modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="commentModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body" id="commentModalBody">
+						<div id="modal-image-container">
+						</div>
+						<p>Category: <strong> <span id="category"></span></strong></p>
+						<p>Area: <strong> <span id="area"></span></strong></p>
+						<p>Tag: <strong> <span id="Tag"></span></strong></p>
+						<p>Video:  <a href="" id="video" target="_blank"></a></p>
+					</div>
+          
+        </div>
+      </div>
+    </div>
+    <footer class="d-flex flex-wrap text-center p-4">
+      ©️ Authors:
+      <a class="text-reset fw-bold" href="https://github.com/BregornOriginal"
+        >Julio Gagliardi</a
+      >
+      <a class="text-reset fw-bold" href="https://github.com/waqaskanju"
+        >Waqas Ahmad</a
+      >
+    </footer>
+    <div class="container"></div>
+  </body>
 </html>

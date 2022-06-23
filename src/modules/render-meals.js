@@ -11,11 +11,15 @@ const showMeals = () => {
         const image = value.meals[i].strMealThumb;
         const title = value.meals[i].strMeal;
         const id = value.meals[i].idMeal;
+        const category = value.meals[i].strCategory;
+        const tag = value.meals[i].strTags;
+        const area = value.meals[i].strArea;
+        const video = value.meals[i].strYoutube;
         const likesData = getLikes(id);
 
         likesData.then((likeValue) => {
           if (!likeValue) { likeValue = 0; }
-          createCard(image, title, id, likeValue);
+          createCard(image, title, id, likeValue, category, tag, area, video);
         });
       }
     }
