@@ -16,6 +16,18 @@ header {
   width: 50%;
 }
 
+#modal-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+#modal-image-container img {
+  width: 100%;
+}
+
 footer {
   display: flex;
   margin-top: 50px;
