@@ -20,7 +20,6 @@ export const getLikes = async (mealId) => {
 };
 
 export const setLikes = async (id) => {
-
   await fetch(`${api}/apps/${appId}/likes?item_id=${id}`, {
     method: 'POST',
     body: JSON.stringify({
