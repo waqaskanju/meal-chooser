@@ -10,6 +10,10 @@ header {
   margin-bottom: 50px;
 }
 
+.like-icon:hover {
+  cursor: pointer;
+}
+
 .btn {
   align-self: center;
   margin: 10px 0;

@@ -1,6 +1,7 @@
-import createCard from './card-element.js';
-import getLikes from './get-likes.js';
+import { createCard } from './card-element.js';
+import { getLikes } from './get-likes.js';
 import getMealData from './get-meals.js';
+import counterMeals from './counter.js';
 
 const showMeals = () => {
   const cardData = getMealData();

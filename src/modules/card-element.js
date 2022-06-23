@@ -1,8 +1,11 @@
+import { setLikes } from "./get-likes.js";
+
 const cardContainer = document.querySelector('.card-container');
 
-const createCard = (image, title, id, cardLikes) => {
+export const createCard = (image, title, id, cardLikes) => {
   const col = document.createElement('div');
   col.classList.add('col');
+  console.log(`${id}`);
   col.setAttribute('id', `${id}`);
   cardContainer.appendChild(col);
 
@@ -30,8 +33,13 @@ const createCard = (image, title, id, cardLikes) => {
   cardBody.appendChild(cardDescription);
 
   const likeIcon = document.createElement('i');
-  likeIcon.classList.add('fa-solid', 'fa-heart-circle-plus');
+  likeIcon.classList.add('like-icon', 'fa-solid', 'fa-heart-circle-plus');
   cardBody.appendChild(likeIcon);
+
+  const sumLike = likeIcon.addEventListener('click', async () =>  {
+    await setLikes(id);
+    location.reload();
+  });
 
   const numberOfLikes = document.createElement('span');
   numberOfLikes.setAttribute('id', 'likesitem1');
@@ -51,5 +59,3 @@ const createCard = (image, title, id, cardLikes) => {
   reservationButton.innerHTML = 'Reservation';
   card.appendChild(reservationButton);
 };
-
-export default createCard;
