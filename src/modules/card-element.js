@@ -1,3 +1,5 @@
+import { setLikes } from './get-likes.js';
+
 const cardContainer = document.querySelector('.card-container');
 
 const createCard = (image, title, id, cardLikes, category, instruction, area, video) => {
@@ -30,8 +32,13 @@ const createCard = (image, title, id, cardLikes, category, instruction, area, vi
   cardBody.appendChild(cardDescription);
 
   const likeIcon = document.createElement('i');
-  likeIcon.classList.add('fa-solid', 'fa-heart-circle-plus');
+  likeIcon.classList.add('like-icon', 'fa-solid', 'fa-heart-circle-plus');
   cardBody.appendChild(likeIcon);
+
+  likeIcon.addEventListener('click', async () => {
+    await setLikes(id);
+    window.location.reload();
+  });
 
   const numberOfLikes = document.createElement('span');
   numberOfLikes.setAttribute('id', 'likesitem1');
