@@ -1,6 +1,7 @@
 import { getLikes } from './get-likes.js';
 import getMealData from './get-meals.js';
 import createCard from './card-element.js';
+import counterMeals from './counter.js';
 
 const showMeals = () => {
   const cardData = getMealData();
@@ -15,6 +16,7 @@ const showMeals = () => {
         const area = value.meals[i].strArea;
         const video = value.meals[i].strYoutube;
         const likesData = getLikes(id);
+        counterMeals(id);
 
         likesData.then((likeValue) => {
           if (likeValue === undefined) {
