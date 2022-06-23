@@ -3,7 +3,7 @@ import { getLikes } from './get-likes.js';
 
 const cardContainer = document.querySelector('.card-container');
 
-const createCard = (image, title, id) => {
+const createCard = (image, title, id, callLikes) => {
   const col = document.createElement('div');
   col.classList.add('col');
   col.setAttribute('id', `${id}`);
@@ -39,7 +39,7 @@ const createCard = (image, title, id) => {
   const numberOfLikes = document.createElement('span');
   numberOfLikes.setAttribute('id', 'likesitem1');
   numberOfLikes.classList.add('number-of-likes');
-  numberOfLikes.innerHTML = '0 likes';
+  numberOfLikes.innerHTML = `${callLikes} likes`;
   cardBody.appendChild(numberOfLikes);
 
   const commentsButton = document.createElement('a');
