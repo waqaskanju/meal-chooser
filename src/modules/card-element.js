@@ -2,7 +2,7 @@ import { setLikes } from './get-likes.js';
 
 const cardContainer = document.querySelector('.card-container');
 
-const createCard = (image, title, id, cardLikes, category, instruction, area, video) => {
+const createCard = (image, title, id, cardLikes, category, instruction, area, video, comments) => {
   const col = document.createElement('div');
   col.classList.add('col');
   col.setAttribute('id', `${id}`);
@@ -67,6 +67,12 @@ const createCard = (image, title, id, cardLikes, category, instruction, area, vi
     myImage.src = image;
     modelImageContainer.appendChild(myImage);
     popupTitle.innerHTML = title;
+
+    const allComments = document.getElementById('showComments');
+    allComments.innerHTML = '';
+    comments.forEach((element) => {
+      allComments.innerHTML += `<li> <span>  ${element.creation_date}    </span> <span> ${element.username}   </span> <span>${element.comment} </span>  </li>`;
+    });
   });
   commentsButton.classList.add('btn', 'btn-primary');
   commentsButton.innerHTML = 'Comments';
