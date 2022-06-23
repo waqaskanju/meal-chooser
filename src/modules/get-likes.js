@@ -1,40 +1,32 @@
-import { api, app_ID } from "./base-api.js";
+import { api, appId } from './base-api.js';
 
-export const getLikes = async (mealId) => {
-  const getData = await fetch(`${api}/apps/${app_ID}/likes`, {
-    method: "GET",
+const getLikes = async (mealId) => {
+  const getData = await fetch(`${api}/apps/${appId}/likes`, {
+    method: 'GET',
     headers: {
-      "Content-type": "application/json; charset=UTF-8",
+      'Content-type': 'application/json; charset=UTF-8',
     },
   });
   if (getData.status !== 400) {
     const results = await getData.json();
-    let needle = mealId;
-    /* let needle = "item1"; */
-    for (let i = 0; i < results.length; i++) {
+    const needle = mealId;
+    for (let i = 0; i < results.length; i += 1) {
       if (results[i].item_id === needle) {
-     return results[i].likes;
+        return results[i].likes;
       }
     }
-
-    // results.map((item) => {
-    //   console.log(item);
-    //   if (item.item_id != null) {
-    //     console.log(item.item_id);
-    //     console.log(item.likes);
-    //     // document.getElementById(`likes${item.item_id}`).innerHTML = `${item.likes} Likes`;
-    //   }
-    //   return true;
-    // });
   }
+  return false;
 };
+
+export default getLikes;
 
 // export const setLikes = async () => {
 //   // const sendInfo = {
 //   //   item_id: item,
 //   // };
 
-//   await fetch(`${api}/apps/${app_ID}/likes?item_id=52950`, {
+//   await fetch(`${api}/apps/${appId}/likes?item_id=52950`, {
 //     method: 'POST',
 //     body: JSON.stringify({
 //       item_id: '52950',

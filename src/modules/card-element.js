@@ -1,6 +1,3 @@
-import getMealData from './get-meals.js';
-import { getLikes } from './get-likes.js';
-
 const cardContainer = document.querySelector('.card-container');
 
 const createCard = (image, title, id, cardLikes) => {

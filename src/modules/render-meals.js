@@ -1,7 +1,6 @@
 import createCard from './card-element.js';
-import { getLikes } from './get-likes.js';
+import getLikes from './get-likes.js';
 import getMealData from './get-meals.js';
-
 
 const showMeals = () => {
   const cardData = getMealData();
@@ -12,22 +11,16 @@ const showMeals = () => {
         const title = value.meals[i].strMeal;
         const id = value.meals[i].idMeal;
         const likesData = getLikes(id);
-      
+
         likesData.then((likeValue) => {
-         if(!likeValue)
-         likeValue=0;
-         createCard(image, title, id,likeValue);
-         });
-
-      
-
+          if (!likeValue) { likeValue = 0; }
+          createCard(image, title, id, likeValue);
+        });
       }
     }
   });
-//
+  //
 
-
- 
 /* end of card data then statment */
 };
 
