@@ -16,17 +16,3 @@ const getComment = async (mealId) => {
 };
 
 export default getComment;
-
-/* export const setLikes = async (id) => {
-  await fetch(`${api}/apps/${appId}/likes?item_id=${id}`, {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: id,
-    }),
-    headers: {
-      'Content-type': 'application/json; charset=UTF-8',
-    },
-  });
-
-  getComment();
-}; */
