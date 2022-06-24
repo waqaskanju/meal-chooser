@@ -12,7 +12,6 @@ const getComment = async (mealId) => {
     results = await getData.json();
   }
   return results;
-  // console.log(results);
 };
 
 export default getComment;

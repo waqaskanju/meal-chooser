@@ -72,6 +72,8 @@ const createCard = (image, title, id, cardLikes, category, instruction, area, vi
     hiddenValue.value = id;
     const allComments = document.getElementById('showComments');
     allComments.innerHTML = '';
+    const numberofcomments = document.getElementById('numberOfComments');
+    numberofcomments.innerHTML = `${comments.length}`;
     comments.forEach((element) => {
       allComments.innerHTML += `<li> <span>  ${element.creation_date}    </span> <span> ${element.username}   </span> <span>${element.comment} </span>  </li>`;
     });
