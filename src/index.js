@@ -11,10 +11,19 @@ getLikes();
 
 function logSubmit(event) {
   event.preventDefault();
-  const userId = document.getElementById('user_id');
-  const userName = document.getElementById('username');
-  const userMsg = document.getElementById('msg');
-  CreateComment(userId, userName, userMsg);
+  const userId = document.getElementById('itemid').value;
+  const userName = document.getElementById('username').value;
+  const userMsg = document.getElementById('comment').value;
+  const response = CreateComment(userId, userName, userMsg);
+  response.then((answer) => {
+    document.getElementById('newComment').innerHTML = `Comment ${answer}`;
+    setTimeout(() => {
+      document.getElementById('newComment').innerHTML = '';
+    }, 3000);
+    setTimeout(() => {
+      window.location.reload();
+    }, 6000);
+  });
 }
 
 const form = document.getElementById('commentForm');
