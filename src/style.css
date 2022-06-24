@@ -1,45 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Smooch&display=swap');
+
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-header {
-  margin-bottom: 50px;
+* {
+	font-family: 'Dancing Script', cursive;
+}
+
+.container-fluid a{
+  font-size: 25px!important;
+}
+
+.navbar {
+  background-color: rgba(191, 192, 157, 0.945)!important;
+	margin-bottom: 23px;
+}
+
+.nav-link:hover {
+  color: rgb(199, 137, 44)!important;
+}
+
+.card-container {
+	background-image: url(./images/background-image.avif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 40px 0;
+}
+
+.card-img-top:hover {
+	filter: brightness(1.15);
+	cursor: pointer;
+}
+
+.number-of-likes {
+  font-size: 25px;
+}
+
+.like-icon {
+	color: rgb(255, 193, 193);
+	margin-left: 20px;
+	font-size: 25px;
 }
 
 .like-icon:hover {
-  cursor: pointer;
+	transition: 0.2s;
+	font-size: 30px;
+}
+
+.like-icon:active {
+	color: red;
+}
+
+.card-title {
+	font-size: 25px;
+}
+
+.card {
+	background-color: rgb(243, 237, 237);
+}
+.like-icon:hover {
+	cursor: pointer;
+}
+
+.likes-container {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	margin: 10px 7px;
+	justify-content: space-between;
 }
 
 .btn {
-  align-self: center;
-  margin: 10px 0;
-  width: 50%;
+  background-color: rgb(199, 137, 44);
+	align-self: center;
+	margin: 10px 0;
+	width: 50%;
+  font-size: 25px;
+}
+
+.btn:hover {
+  background-color: rgb(199, 137, 44);
+	filter: brightness(1.5);
+}
+
+.btn:focus {
+  background-color: rgb(199, 137, 44);
+  border-color: rgb(199, 137, 44);
+	filter: brightness(1.5);
 }
 
 #modal-image-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2rem;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 2rem;
 }
 
 #modal-image-container img {
-  width: 100%;
+	width: 100%;
+}
+
+.modal-dialog li {
+	list-style: none;
+	margin-left: 25px;
+	margin-bottom: 6px;
+}
+
+.modal-dialog h5 {
+	font-size: 28px;
+	align-self: center;
+	margin-top: 20px;
+}
+
+.modal-dialog {
+	font-size: 24px;
+}
+
+.date {
+	font-size: 20px;
+}
+
+.username-comment {
+	border-bottom: solid 1px black;
+	margin-left: 10px;
+}
+
+@media screen and (max-width: 890px) {
+	.col {
+    display: flex;
+		justify-content: center;
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.col {
+    display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.row-cols-md-3 > * {
+		display: flex;
+		justify-content: center;
+		flex: 0 0 auto;
+		width: 33.3333333333%;
+	}
 }
 
 footer {
-  display: flex;
-  margin-top: 50px;
-  background-color: rgba(191, 192, 157, 0.945);
+	display: flex;
+  font-size: 25px;
+	background-color: rgba(191, 192, 157, 0.945);
 }
 
 footer a {
-  margin: 0 40px;
+	margin: 0 40px;
 }
 
 .form-flex {
