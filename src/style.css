@@ -41,3 +41,14 @@ footer {
 footer a {
   margin: 0 40px;
 }
+
+.form-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-flex > input {
+  margin: 1rem 0;
+}

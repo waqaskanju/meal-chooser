@@ -68,6 +68,8 @@ const createCard = (image, title, id, cardLikes, category, instruction, area, vi
     modelImageContainer.appendChild(myImage);
     popupTitle.innerHTML = title;
 
+    const hiddenValue = document.getElementById('item_id');
+    hiddenValue.value = id;
     const allComments = document.getElementById('showComments');
     allComments.innerHTML = '';
     comments.forEach((element) => {
