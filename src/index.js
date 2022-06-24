@@ -28,5 +28,3 @@ function logSubmit(event) {
 
 const form = document.getElementById('commentForm');
 form.addEventListener('submit', logSubmit);
-
-// https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/1HOyfG1TSei7hYcDnLzZ/comments?item_id=52937
