@@ -2,6 +2,7 @@ import { getLikes } from './get-likes.js';
 import getMealData from './get-meals.js';
 import createCard from './card-element.js';
 import counterMeals from './counter.js';
+import getComment from './getComment.js';
 
 const showMeals = () => {
   const cardData = getMealData();
@@ -16,19 +17,20 @@ const showMeals = () => {
         const area = value.meals[i].strArea;
         const video = value.meals[i].strYoutube;
         const likesData = getLikes(id);
+        const CommentData = getComment(id);
         counterMeals(id);
-
-        likesData.then((likeValue) => {
-          if (likeValue === undefined) {
-            likeValue = 0;
-          }
-          createCard(image, title, id, likeValue, category, tag, area, video);
+        CommentData.then((comments) => {
+          // eslint-disable-next-line no-loop-func
+          likesData.then((likeValue) => {
+            if (likeValue === undefined) {
+              likeValue = 0;
+            }
+            createCard(image, title, id, likeValue, category, tag, area, video, comments);
+          });
         });
       }
     }
   });
-  //
-
 /* end of card data then statment */
 };
 
