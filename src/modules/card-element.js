@@ -75,7 +75,7 @@ const createCard = (image, title, id, cardLikes, category, instruction, area, vi
     const numberofcomments = document.getElementById('numberOfComments');
     numberofcomments.innerHTML = `${comments.length}`;
     comments.forEach((element) => {
-      allComments.innerHTML += `<li> <span>  ${element.creation_date}    </span> <span> ${element.username}   </span> <span>${element.comment} </span>  </li>`;
+      allComments.innerHTML += `<li> <span class="date">  ${element.creation_date}    </span> <span class="username-comment" > ${element.username}   </span> <span>: ${element.comment} </span>  </li>`;
     });
   });
   commentsButton.classList.add('btn', 'btn-primary');

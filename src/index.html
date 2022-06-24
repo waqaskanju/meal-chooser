@@ -13,7 +13,7 @@
     <header>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" id="home" href="#">Meal Chooser</a>
+          <a target="_blank" class="navbar-brand" id="home" href="https://www.themealdb.com/api.php">Meal Chooser</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -37,10 +37,10 @@
                 >
               </li>
               <li class="nav-item border-start border-3" id="newbookLi">
-                <a class="nav-link" href="#" id="newbook">Comments</a>
+                <a class="nav-link" href="#" id="newbook">Categories</a>
               </li>
               <li class="nav-item border-start border-3" id="contactNavLinkLi">
-                <a class="nav-link" href="#" id="contactNavLink">Reservation</a>
+                <a class="nav-link" href="#" id="contactNavLink">Most eated</a>
               </li>
             </ul>
           </div>
@@ -87,10 +87,10 @@
           <div id="showComments"></div>
           <h5>Add Comment  </h5>
           <form  method="POST" id="commentForm" class="form-flex">
-            <input type="text" name="username" id="username" />
-            <input type="text" name="comment" id="comment" />
+            <input placeholder="Enter your name" type="text" name="username" id="username" />
+            <input placeholder="Enter your comment" type="text" name="comment" id="comment" />
 		      	<input type="hidden" name="item_id" id="itemid" value="">
-            <button type="submit">Comment</button>
+            <button class="btn btn-primary" type="submit">Comment</button>
           </form>
         </div>
       </div>
