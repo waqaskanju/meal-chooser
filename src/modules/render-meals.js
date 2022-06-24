@@ -19,10 +19,7 @@ const showMeals = () => {
         const likesData = getLikes(id);
         const CommentData = getComment(id);
         counterMeals(id);
-
         CommentData.then((comments) => {
-          // console.log(comments);
-
           // eslint-disable-next-line no-loop-func
           likesData.then((likeValue) => {
             if (likeValue === undefined) {
@@ -34,8 +31,6 @@ const showMeals = () => {
       }
     }
   });
-  //
-
 /* end of card data then statment */
 };
 
