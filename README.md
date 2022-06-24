@@ -1,14 +1,37 @@
-# Sample Repo
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This Repo is for creating a application for Resturent Using Api, People can like and add comment on meal. It is one of task in Microverse JavaScript Course.
+# Meals Chooser
+
+This Repo is for creating a application for Restaurent Using Api, People can like and add comment on meal. It is one of task in Microverse JavaScript Course.
+
+## PPRESENTATION IN LOOM
+
 
 ## Built With
 
-- HTML
-- CSS
-- JavaScript
-- Webpack
-- Meal-db
+Technologies
+
+🔷HTML
+
+🔷CSS
+
+🔷JAVASCRIPT
+
+🔷WEBPACK
+
+🔷API
+
+Tools
+
+💠VISUAL STUDIO CODE
+
+💠GITHUB-DESKTOP
+
+💠GITHUB-ACTIONS
+
+💠LINTERS
+
+💠LOOM
 
 # Project Name
 
@@ -16,7 +39,7 @@ Meal Choose
 
 # Live Demo
 
-(https://waqaskanju.github.io)
+[JAVASCRIPT CAPSTONE / MEALS API]()
 
 ## Getting Started
 
@@ -54,8 +77,11 @@ There is a test file (linters.yml) for this project inside the .github/workflows
 It executes three types of tests inside github actions.
 
 1.lighthouse
+
 2.webhint
+
 3.stylint
+
 4.Eslint
 
 
@@ -72,6 +98,18 @@ Desktop Screen Size above >786
 - GitHub: [@githubhandle](https://github.com/waqas)
 - Twitter: [@twitterhandle](https://twitter.com/waqas)
 - LinkedIn: [@LinkedIn](https://linkedin.com/in/waqas)
+
+👤 **Julio Miguel Gagliardi**
+
+- GitHub: [@githubhandle](https://github.com/BregornOriginal)
+- Twitter: [@twitterhandle](https://twitter.com/bregorn)
+- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/julio-miguel-gagliardi-b81829197/)
+
+> We worked with 2 API
+
+> The API to get the [Meals](https://www.themealdb.com/api.php)
+
+> The API to set the [comments and likes](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270)
 
 ## 🤝 Contributing
 
